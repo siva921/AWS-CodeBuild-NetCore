@@ -1,0 +1,8 @@
+/Users/georgesaadeh/Dev/projects/SampleCore/bin/Debug/netcoreapp1.1/SampleCore.deps.json
+/Users/georgesaadeh/Dev/projects/SampleCore/bin/Debug/netcoreapp1.1/SampleCore.runtimeconfig.json
+/Users/georgesaadeh/Dev/projects/SampleCore/bin/Debug/netcoreapp1.1/SampleCore.runtimeconfig.dev.json
+/Users/georgesaadeh/Dev/projects/SampleCore/bin/Debug/netcoreapp1.1/SampleCore.dll
+/Users/georgesaadeh/Dev/projects/SampleCore/bin/Debug/netcoreapp1.1/SampleCore.pdb
+/Users/georgesaadeh/Dev/projects/SampleCore/obj/Debug/netcoreapp1.1/SampleCore.AssemblyInfo.cs
+/Users/georgesaadeh/Dev/projects/SampleCore/obj/Debug/netcoreapp1.1/SampleCore.dll
+/Users/georgesaadeh/Dev/projects/SampleCore/obj/Debug/netcoreapp1.1/SampleCore.pdb
