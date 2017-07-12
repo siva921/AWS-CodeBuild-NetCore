@@ -9614,16 +9614,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/georgesaadeh/Dev/projects/SampleCore/SampleCore.csproj",
+      "projectUniqueName": "/Users/georgesaadeh/Dev/projects/CodeBuild-SampleCore/SampleCore.csproj",
       "projectName": "SampleCore",
-      "projectPath": "/Users/georgesaadeh/Dev/projects/SampleCore/SampleCore.csproj",
-      "outputPath": "/Users/georgesaadeh/Dev/projects/SampleCore/obj/",
+      "projectPath": "/Users/georgesaadeh/Dev/projects/CodeBuild-SampleCore/SampleCore.csproj",
+      "outputPath": "/Users/georgesaadeh/Dev/projects/CodeBuild-SampleCore/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/SampleCore.dll": "/Users/georgesaadeh/Dev/projects/SampleCore/bin/placeholder/netcoreapp1.1/SampleCore.dll"
+        "lib/netcoreapp1.1/SampleCore.dll": "/Users/georgesaadeh/Dev/projects/CodeBuild-SampleCore/bin/placeholder/netcoreapp1.1/SampleCore.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {
