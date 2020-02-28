@@ -2,8 +2,9 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - dotnet tool install --global dotnet-sonarscanner --version 4.7.1
-      - export PATH="$PATH:/root/.dotnet/tools"
+      - wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
+      - unzip ./sonar-scanner-cli-3.3.0.1492-linux.zip
+      - export PATH=$PATH:/sonar-scanner-3.3.0.1492-linux/bin/
       - echo Restore started on `date`
       - dotnet restore SampleCore.csproj
   build:
