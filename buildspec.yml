@@ -9,11 +9,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
-      - SonarScanner.MSBuild.exe begin /k:"project-key" 
-      - MSBuild.exe <path to solution.sln> /t:Rebuild
-      - SonarScanner.MSBuild.exe end
       - dotnet publish -c release -o ./build_output SampleCore.csproj
+      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
 artifacts:
   files:
     - CodeBuild-SampleCore/build_output/**/*
