@@ -3,13 +3,12 @@ phases:
   pre_build:
     commands:
       - dotnet tool install --global dotnet-sonarscanner --version 4.7.1
-      - export PATH=$PATH:/sonar-scanner-4.7.1.1492-linux/bin/
+      - export PATH="$PATH:/root/.dotnet/tools"
       - echo Restore started on `date`
       - dotnet restore SampleCore.csproj
   build:
     commands:
       - echo Build started on `date`
-      - Dotnet sonar:sonar -Dsonar.login=$LOGIN -Dsonar.host.url=$HOST -Dsonar.projectKey=$Project -Dsonar.organization=$Organization
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
       - SonarScanner.MSBuild.exe begin /k:"project-key" 
       - MSBuild.exe <path to solution.sln> /t:Rebuild
