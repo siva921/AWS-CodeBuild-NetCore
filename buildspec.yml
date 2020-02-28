@@ -3,14 +3,15 @@ phases:
   pre_build:
     commands:
       - dotnet tool install --global dotnet-sonarscanner --version 4.7.1
+      - export PATH="$PATH:/root/.dotnet/tools"
       - echo Restore started on `date`
       - dotnet restore SampleCore.csproj
   build:
     commands:
       - echo Build started on `date`
-      - dotnet <path to SonarScanner.MSBuild.dll> begin /k:"project-key" 
-      - dotnet build <path to solution.sln>
-      - dotnet <path to SonarScanner.MSBuild.dll> end
+      - SonarScanner.MSBuild.exe begin /k:"project-key" 
+      - MSBuild.exe <path to solution.sln> /t:Rebuild
+      - SonarScanner.MSBuild.exe end
       - dotnet publish -c release -o ./build_output SampleCore.csproj
 artifacts:
   files:
