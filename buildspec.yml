@@ -18,8 +18,8 @@ phases:
       - echo Build started on `date`
       - dotnet publish -c release -o ./build_output SampleCore.csproj
       - sonar-scanner \ 
-          -Dsonar.organization=siva921 \
-          -Dsonar.projectKey=SampleTestProject1 \
+          -Dsonar.organization=$Organization \
+          -Dsonar.projectKey=$Project \
           -Dsonar.sources=. \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=e0d0e3d2a2a2de080eed54cf9aa3e33a82b20da4
