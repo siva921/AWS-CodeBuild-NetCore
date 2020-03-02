@@ -19,7 +19,6 @@ phases:
       - dotnet publish -c release -o ./build_output SampleCore.csproj
       - sonar-scanner \ 
           -Dsonar.organization=$Organization \
-          -Dsonar.projectKey=$Project \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=e0d0e3d2a2a2de080eed54cf9aa3e33a82b20da4
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
