@@ -16,8 +16,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c release -o ./build_output SampleCore.csproj
-      - sonar-scanner -Dsonar.login=$LOGIN -Dsonar.host.url=$HOST -Dsonar.projectKey=$Project -Dsonar.organization=$Organization
+      - sonar-scanner 
+      - dotnet publish -c release -o ./build_output SampleCore.csproj 
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
 artifacts:
   files:
