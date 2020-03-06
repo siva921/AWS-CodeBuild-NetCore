@@ -11,14 +11,14 @@ phases:
       - unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
       - export PATH=$SONAR_SCANNER_HOME/bin:$PATH
       - export SONAR_SCANNER_OPTS="-server"
-      - chmod +x run.sh
-      - ./run.sh
       - echo Restore started on `date`
       - dotnet restore SampleCore.csproj
   build:
     commands:
       - echo Build started on `date`
       - sonar-scanner 
+      - chmod +x run.sh
+      - ./run.sh
       - dotnet publish -c release -o ./build_output SampleCore.csproj 
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
 artifacts:
