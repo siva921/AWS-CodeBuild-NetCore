@@ -16,9 +16,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - sonar-scanner 
-      - sonar.qualitygate.wait=true
-    allow_failure: true
+      - sonar-scanner -Dsonar.qualitygate.wait=true
+  allow_failure: true
       - chmod +x run.sh
       - ./run.sh
       - dotnet publish -c release -o ./build_output SampleCore.csproj 
